@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tinh tuoi 2</title>
+</head>
+<body>
+    <h3> nhap nam sinh cua ban</h3>
+    <input type="number" id="namsinh"/>
+    <button onclick="tinhtuoi()">TINH TUOI</button>
+    <p id="ketqua"></p>
+    <script>
+        function tinhtuoi(){
+            let today = new Date();
+            let namhientai = today.getFullYear();
+            let namsinh;
+            do{
+                namsinh=document.getElementById("namsinh").value;
+                if(namsinh > namhientai){
+                    console.log("Nam sinh lon hon nam hien tai, vui long nhap lai!")
+                }
+            }while(namsinh > namhientai);
+                let tuoi= namhientai- namsinh;
+                document.getElementById("ketqua").innerHTML="tuoi cua ban la:"+tuoi;
+            
+            
+        }
+    </script>
+</body>
+</html>

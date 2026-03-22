@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Bài tập JavaScript 23</title>
+    <meta charset="UTF-8">
+</head> 
+
+<body style="font-family:arial; padding: 20px;">
+    <h1>Tính hóa đơn:</h1> 
+    
+    Số lượng: 
+    <input type="number" id="SoLuong" value="0">
+    
+    Đơn giá: 
+    <input type="number" id="DonGia" onkeyup="tinhToan()"> 
+    <hr>
+    
+    Thành tiền: 
+    <input type="text" id="ThanhTien" readonly> USD 
+
+    <script>
+        function tinhToan() {
+
+            var sl = document.getElementById('SoLuong').value;
+            var dg = document.getElementById('DonGia').value;
+            
+            document.getElementById('ThanhTien').value = sl * dg;
+        }
+    </script>
+</body>
+</html>
