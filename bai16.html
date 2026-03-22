@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bài tập JavaScript 16</title>
+
+    <script>
+        function ThayDoiGiaTri() {
+            // Lấy giá trị trực tiếp từ các ô input và gán vào thuộc tính tài liệu
+            document.bgColor = document.getElementById("MauNen").value;
+            document.fgColor = document.getElementById("MauChu").value;
+            document.title = document.getElementById("TieuDe").value;
+            window.status = document.getElementById("TrangThai").value;
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Thay đổi thuộc tính trang</h2>
+
+    Màu nền: <input type="text" id="MauNen" name="MauNen"><br><br>
+    Màu chữ: <input type="text" id="MauChu" name="MauChu"><br><br>
+    Tiêu đề: <input type="text" id="TieuDe" name="TieuDe"><br><br>
+    Trạng thái: <input type="text" id="TrangThai" name="TrangThai"><br><br>
+
+    <input type="button" name="ThayDoi" value="Thay đổi" onclick="ThayDoiGiaTri()">
+</body>
+</html>
