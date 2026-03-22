@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container ">
+        <div class="mb-3">
+            <label class="btn btn-primary" >Moi nhap noi dung</label><br><br>
+            <textarea name="noidung" id="noidung" cols="50" rows="10" onkeyup="ktra()"></textarea>
+        </div>
+        <div class="mb-3">
+            <label class="btn btn-primary">So ky tu</label><br><br>
+            <input type="text" name="sokytu" id="sokytu" />
+
+        </div>
+
+    </div>
+    <script>
+        function ktra(){
+            let chuoi=document.getElementById("noidung").value
+            let dodai= chuoi.length
+
+            document.getElementById("sokytu").value= dodai
+            if(dodai >200){
+                alert('Bạn đã gõ quá số ký tự cho phép!')
+            }
+        }
+    </script>
+</body>
+</html>
